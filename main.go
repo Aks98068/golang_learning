@@ -2,7 +2,9 @@ package main
 
 import (
 	"fmt"
+	"go1/help"
 	"strings"
+	// Importing the utils package
 )
 
 // entry point of the program
@@ -168,43 +170,82 @@ func main() {
 	fmt.Println(gyani)
 	fmt.Println(abhishekh.age)
 
-	fmt.Printf("%v\n", abhishekh)
-	fmt.Printf("%+v\n", abhishekh)
-	fmt.Printf("%#v\n", abhishekh)
-	fmt.Printf("%T\n", abhishekh)
+	fmt.Printf("%v\n", abhishekh)  //printing the variable
+	fmt.Printf("%+v\n", abhishekh) //printing the variable with field names
+	fmt.Printf("%#v\n", abhishekh) //printing the variable with field names
+	fmt.Printf("%T\n", abhishekh)  //pritning the type of vaiable
 	fmt.Printf("%t\n", abhishekh.age > gyani.age)
-	fmt.Printf("%d\n", abhishekh.age)
-	fmt.Printf("%b\n", abhishekh.height)
-	fmt.Printf("%c\n", abhishekh.lastname[0])
-	fmt.Printf("%x\n", abhishekh.lastname)
-	fmt.Printf("%f\n", abhishekh.height)
-	fmt.Printf("%s\n", abhishekh.lastname)
-	fmt.Printf("%q\n", abhishekh.lastname)
-	fmt.Printf("%x\n", abhishekh.firstname)
-	fmt.Printf("%p\n", &abhishekh)
-	fmt.Printf("|%6d|%6d|\n", 12, 345)
-	fmt.Printf("|%6.2f|%6.2f|\n", 1.2, 3.45)
-	fmt.Printf("|%-6.2f|%-6.2f|\n", 1.2, 3.45)
-	fmt.Printf("|%6s|%6s|\n", "foo", "b")
-	fmt.Printf("|%-6s|%-6s|\n", "foo", "b")
-	fmt.Printf("|%6t|%6t|\n", true, false)
-	fmt.Printf("|%-6t|%-6t|\n", true, false)
-	fmt.Printf("|%6v|%6v|\n", abhishekh, gyani)
-	fmt.Printf("|%-6v|%-6v|\n", abhishekh, gyani)
-	fmt.Printf("|%6+|%-6+|\n", abhishekh.age, gyani.age)
-	fmt.Printf("|%6#|%-6#|\n", abhishekh, gyani)
-	fmt.Printf("|%6T|%6T|\n", abhishekh, gyani)
-	fmt.Printf("|%-6T|%-6T|\n", abhishekh, gyani)
-	fmt.Printf("|%6t|%6t|\n", true, false)
-	fmt.Printf("|%-6t|%-6t|\n", true, false)
-	fmt.Printf("|%6d|%6d|\n", 12, 345)
-	fmt.Printf("|%-6d|%-6d|\n", 12, 345)
-	fmt.Printf("|%6.2f|%6.2f|\n", 1.2, 3.45)
-	fmt.Printf("|%-6.2f|%-6.2f|\n", 1.2, 3.45)
-	fmt.Printf("|%6s|%6s|\n", "foo", "b")
-	fmt.Printf("|%-6s|%-6s|\n", "foo", "b")
-	fmt.Printf("|%6x|%6x|\n", 12, 345)
-	fmt.Printf("|%-6x|%-6x|\n", 12, 345)
+	fmt.Printf("%d\n", abhishekh.age)                    //printing the integer
+	fmt.Printf("%b\n", abhishekh.height)                 //printing the binary
+	fmt.Printf("%c\n", abhishekh.lastname[0])            //printing the character
+	fmt.Printf("%x\n", abhishekh.lastname)               //printing the hex
+	fmt.Printf("%f\n", abhishekh.height)                 //printing the float
+	fmt.Printf("%s\n", abhishekh.lastname)               //printing the string
+	fmt.Printf("%q\n", abhishekh.lastname)               //printing the double quoted string
+	fmt.Printf("%x\n", abhishekh.firstname)              //printing the hex
+	fmt.Printf("%p\n", &abhishekh)                       //printing the pointer
+	fmt.Printf("%e\n", 12340000000.0)                    //printing the scientific notation
+	fmt.Printf("%E\n", 12340000000.0)                    //printing the scientific notation
+	fmt.Printf("|%6d|%6d|\n", 12, 345)                   //printing the decimal
+	fmt.Printf("|%6.2f|%6.2f|\n", 1.2, 3.45)             //printing the float
+	fmt.Printf("|%-6.2f|%-6.2f|\n", 1.2, 3.45)           //printing the float
+	fmt.Printf("|%6s|%6s|\n", "foo", "b")                //printing the string
+	fmt.Printf("|%-6s|%-6s|\n", "foo", "b")              //printing the string
+	fmt.Printf("|%6t|%6t|\n", true, false)               //printing the boolean
+	fmt.Printf("|%-6t|%-6t|\n", true, false)             //printing the boolean
+	fmt.Printf("|%6v|%6v|\n", abhishekh, gyani)          //printing the value
+	fmt.Printf("|%-6v|%-6v|\n", abhishekh, gyani)        //printing the value
+	fmt.Printf("|%6+|%-6+|\n", abhishekh.age, gyani.age) //printing the sign
+	fmt.Printf("|%6#|%-6#|\n", abhishekh, gyani)         //printing the alternate form
+	fmt.Printf("|%6T|%6T|\n", abhishekh, gyani)          //printing the type
+	fmt.Printf("|%-6T|%-6T|\n", abhishekh, gyani)        //printing the type
+	fmt.Printf("|%6t|%6t|\n", true, false)               //printing the boolean
+	fmt.Printf("|%-6t|%-6t|\n", true, false)             //printing the boolean
+	fmt.Printf("|%6d|%6d|\n", 12, 345)                   //printing the decimal
+	fmt.Printf("|%-6d|%-6d|\n", 12, 345)                 //printing the decimal
+	fmt.Printf("|%6.2f|%6.2f|\n", 1.2, 3.45)             //printing the float
+	fmt.Printf("|%-6.2f|%-6.2f|\n", 1.2, 3.45)           //printing the float
+	fmt.Printf("|%6s|%6s|\n", "foo", "b")                //printing the string
+	fmt.Printf("|%-6s|%-6s|\n", "foo", "b")              //printing the string
+	fmt.Printf("|%6x|%6x|\n", 12, 345)                   //printing the hex
+	fmt.Printf("|%-6x|%-6x|\n", 12, 345)                 //printing the hex
+	fmt.Printf("|%6p|%6p|\n", &abhishekh, &gyani)        //printing the pointer
+
+	fmt.Printf("%x\n", 80) //printing the hex
+	help.Greet("Abhishekh")
+	ss := help.Sad // Replace 'SomeValidIdentifier' with an actual identifier from the 'help' package
+	fmt.Println(ss)
+	fmt.Println(d)
+
+	fmt.Printf("%T\n", help.Type1)
+	fmt.Printf("%T\n", help.Type2)
+
+	help.Condition1()
+
+	result, err := help.Dothing()
+
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		fmt.Println(result)
+	}
+
+	help.Switch1()
+	help.Loop1()
+	fmt.Println("sum is:")
+	help.Range1()
+	var A = 1
+	var B = 2
+	var C = 3
+	rr := 1
+
+	//calling arrow function
+	Outputs, int1 := help.Foo(rr)
+	println(Outputs, int1)
+
+	//calling multiple arguments
+	results, int2 := help.Multi1(A, B, C)
+	println(results, int2)
 
 }
 
